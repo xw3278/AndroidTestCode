@@ -14,6 +14,10 @@ public class ActivityLiftCycleTest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lift_cycle_test);
         Log.d(TAG, "onCreate");
+        if (savedInstanceState != null){
+            String tempData = savedInstanceState.getString("data_key");
+            Log.d(TAG, tempData);
+        }
         setContentView(R.layout.activity_lift_cycle_test);
         Button startNormalActivity = (Button) findViewById(R.id.start_normal_activity);
         Button startDialogActivity = (Button) findViewById(R.id.start_dialog_activity);
@@ -31,6 +35,13 @@ public class ActivityLiftCycleTest extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String tempData = "something you just typed.";
+        outState.putString("data_key", tempData);
     }
 
     @Override

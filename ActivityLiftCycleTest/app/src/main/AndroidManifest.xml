@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".NormalActivity" />
         <activity android:name=".DialogActivity"
-            android:theme="@android:style/Theme.Dialog"></activity>
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>
