@@ -11,12 +11,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
+        Log.d("FirstActivity", this.toString());
         Button button_one = (Button)findViewById(R.id.button_1);
         button_one.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -45,6 +46,8 @@ public class FirstActivity extends AppCompatActivity {
                 //startActivity(intent);
                 Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
                 startActivityForResult(intent, 1);
+                //Intent intent = new Intent(FirstActivity.this, FirstActivity.class);
+                //startActivity(intent);
             }
         });
     }

@@ -12,6 +12,7 @@
         <activity
             android:name=".FirstActivity"
             android:label="This is first activity">
+            //android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
