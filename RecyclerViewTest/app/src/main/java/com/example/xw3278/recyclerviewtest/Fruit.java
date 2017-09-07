@@ -1,4 +1,4 @@
-package com.example.listviewtest;
+package com.example.xw3278.recyclerviewtest;
 
 public class Fruit {
 
