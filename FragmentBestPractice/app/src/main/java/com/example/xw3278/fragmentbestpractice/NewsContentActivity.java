@@ -18,9 +18,9 @@ public class NewsContentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_content);
-        String newsTitle = getIntent().getStringExtra("news_title"); // »ñÈ¡´«ÈëµÄĞÂÎÅ±êÌâ
-        String newsContent = getIntent().getStringExtra("news_content"); // »ñÈ¡´«ÈëµÄĞÂÎÅÄÚÈİ
+        String newsTitle = getIntent().getStringExtra("news_title"); // è·å–ä¼ å…¥çš„æ–°é—»æ ‡é¢˜
+        String newsContent = getIntent().getStringExtra("news_content"); // è·å–ä¼ å…¥çš„æ–°é—»å†…å®¹
         NewsContentFragment newsContentFragment = (NewsContentFragment) getSupportFragmentManager().findFragmentById(R.id.news_content_fragment);
-        newsContentFragment.refresh(newsTitle, newsContent); // Ë¢ĞÂNewsContentFragment½çÃæ
+        newsContentFragment.refresh(newsTitle, newsContent); // åˆ·æ–°NewsContentFragmentç•Œé¢
     }
 }
