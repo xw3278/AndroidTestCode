@@ -59,12 +59,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Request request = new Request.Builder()
                             //.url("https://www.baidu.com")
                             //.url("http://10.0.2.2/get_data.xml")  //emulator
-                            .url("https://127.0.0.1/get_data.xml")
+                            .url("http://192.168.1.101/get_data.xml")
                             //.post(requestBody)
                             .build();
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
-                    //showResponse(responseData);
+                    showResponse(responseData);
                     parseXMLWithPull(responseData);
                 }catch (Exception e) {
                     e.printStackTrace();
